@@ -2,17 +2,17 @@ package org.example.lesson_1
 
 fun main() {
     val year = 1961
-    var hourLaunch = "09"
-    var minuteLaunch = "07"
+    var hour = "09"
+    var minute = "07"
 
 //    println(year)
-//    println(hourLaunch)
-//    println(minuteLaunch)
+//    println(hour)
+//    println(minute)
 
-    var hourLanding = "10:"
-    var minuteLanding = "50"
+    hour = "10:"
+    minute = "50"
 
     println(year)
-    print(hourLanding)
-    print(minuteLanding)
+    print(hour)
+    print(minute)
 }
