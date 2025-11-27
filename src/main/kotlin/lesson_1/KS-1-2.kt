@@ -7,9 +7,9 @@ fun main () {
     println(numberOfOders)
     println(thanksMessage)
 
-//    val numbersOfWorkers: Int = 2000
+var numbersOfWorkers: Int = 2000
 //    println(numbersOfWorkers)
 
-    val numbersOfWorkers: Int = 1999
+    numbersOfWorkers = 1999
     println(numbersOfWorkers)
 }
