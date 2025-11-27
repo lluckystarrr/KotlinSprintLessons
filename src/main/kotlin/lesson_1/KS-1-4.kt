@@ -11,7 +11,7 @@ fun main ()
 
     println(length)
     println(age)
-    print(partOfDay)
+    println(partOfDay)
     println(seconds)
     println(partOfYear)
     println(apogee)
