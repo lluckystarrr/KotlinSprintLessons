@@ -8,6 +8,8 @@ fun main() {
     val cristalBuff  = cristal * buffPercsent / 100
     val ironBuff = iron * buffPercsent / 100
 
+    print("Кристаллическая руда: ")
     println(ironBuff)
+    print("Железная руда: ")
     println(cristalBuff)
 }
