@@ -11,10 +11,14 @@ fun main() {
     println("Введи второе число от 0 до 42")
     val secondUserNumber = readln().toInt()
 
-    if ((firstUserNumber == FIRST_NUMBER && secondUserNumber == SECOND_NUMBER) || (firstUserNumber == SECOND_NUMBER && secondUserNumber == SECOND_NUMBER)) {
+    if ((firstUserNumber == FIRST_NUMBER && secondUserNumber == SECOND_NUMBER) ||
+        (firstUserNumber == SECOND_NUMBER && secondUserNumber == SECOND_NUMBER)
+    ) {
         println("Поздравляем! Вы выиграли главный приз!")
-    } else if ((firstUserNumber == FIRST_NUMBER || secondUserNumber == SECOND_NUMBER) || (firstUserNumber == SECOND_NUMBER || secondUserNumber == SECOND_NUMBER)) {
-       println("Вы выиграли утешительный приз!")
+    } else if ((firstUserNumber == FIRST_NUMBER || secondUserNumber == SECOND_NUMBER) ||
+        (firstUserNumber == SECOND_NUMBER || secondUserNumber == SECOND_NUMBER)
+    ) {
+        println("Вы выиграли утешительный приз!")
         println("Выигрышные числа - $FIRST_NUMBER, $SECOND_NUMBER")
     } else {
         println("Неудача!")
