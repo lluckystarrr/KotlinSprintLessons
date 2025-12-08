@@ -2,13 +2,15 @@ package org.example.lesson_5
 
 const val FIRST_NUMBER = 13
 const val SECOND_NUMBER = 19
+const val MIN_NUMBER = 0
+const val MAX_NUMBER = 42
 
 fun main() {
 
-    println("Введи первое число от 0 до 42")
+    println("Введи первое число от $MIN_NUMBER до $MAX_NUMBER")
     val firstUserNumber = readln().toInt()
 
-    println("Введи второе число от 0 до 42")
+    println("Введи второе число от $MIN_NUMBER до $MAX_NUMBER")
     val secondUserNumber = readln().toInt()
 
     if ((firstUserNumber == FIRST_NUMBER && secondUserNumber == SECOND_NUMBER) ||
