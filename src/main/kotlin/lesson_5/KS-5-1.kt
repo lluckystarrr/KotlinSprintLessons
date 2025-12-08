@@ -1,8 +1,8 @@
 package org.example.lesson_5
 
 fun main() {
-    var firstNumber = 7
-    var secondNumber = 8
+    val firstNumber = 7
+    val secondNumber = 8
     val expression = firstNumber + secondNumber
 
     println("Сколько будет $firstNumber + $secondNumber?")
