@@ -1,8 +1,12 @@
 package org.example.lesson_5
 
 fun main() {
-    println("Сколько будет 7 + 8?")
-    val expression = 7 + 8
+    var firstNumber = 7
+    var secondNumber = 8
+    val expression = firstNumber + secondNumber
+
+    println("Сколько будет $firstNumber + $secondNumber?")
+
     val answer = readln().toInt()
     if (answer == expression) {
         println("Добро пожаловать!")
