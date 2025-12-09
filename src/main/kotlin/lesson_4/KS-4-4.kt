@@ -4,10 +4,11 @@ fun main() {
 
     val trainingDay = 1
 
-    val armsDay = trainingDay % 2 == 0
-    val pressDay = trainingDay % 2 == 0
-    val legsDay = !armsDay
-    val backDay = !pressDay
+    val isEven = trainingDay % 2 == 0
+    val armsDay = isEven
+    val pressDay = isEven
+    val legsDay = !isEven
+    val backDay = !isEven
 
     println("""
         Упражнения для рук: $armsDay
