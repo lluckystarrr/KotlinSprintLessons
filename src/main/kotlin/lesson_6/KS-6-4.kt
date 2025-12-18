@@ -1,5 +1,5 @@
-//package org.example.lesson_6
-//
+package org.example.lesson_6
+
 const val MIN_NUMBER = 1
 const val MAX_NUMBER = 9
 
@@ -15,12 +15,11 @@ fun main() {
         --attempt
         if ((attempt > 0) && (number != randomNumber)) {
             println("Неверно. Осталось попыток - $attempt")
+        } else {
+            println("Это была великолепная игра!")
+            return
         }
-    } while ((attempt > 0) && (number != randomNumber))
+    } while (number != randomNumber)
 
-    if (number != randomNumber) {
-        println("Увы, было загадано число $randomNumber")
-    } else {
-        println("Это была великолепная игра!")
-    }
+    println("Увы, было загадано число $randomNumber")
 }
