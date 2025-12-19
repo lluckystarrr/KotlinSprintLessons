@@ -12,14 +12,14 @@ fun main() {
 
     do {
         number = readln().toInt()
-        --attempt
-        if ((attempt > 0) && (number != randomNumber)) {
+        if (number != randomNumber) {
+            --attempt
             println("Неверно. Осталось попыток - $attempt")
         } else {
             println("Это была великолепная игра!")
             return
         }
-    } while (number != randomNumber)
+    } while (attempt > 0)
 
     println("Увы, было загадано число $randomNumber")
 }
