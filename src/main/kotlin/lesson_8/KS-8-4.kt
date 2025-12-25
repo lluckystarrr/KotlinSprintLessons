@@ -9,8 +9,7 @@ fun main() {
     println("Какой ингредиент заменить?")
     val changeIngredients = readln()
 
-    val ingredient = arrayOfIngredients.contains(changeIngredients)
-    if (ingredient) {
+    if (changeIngredients in arrayOfIngredients) {
         println("На какой ингредиент заменим?")
         val inputIngredients = readln()
 
