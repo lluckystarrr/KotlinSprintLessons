@@ -11,15 +11,13 @@ fun main() {
 
     if (addIngredient.equals("да", ignoreCase = true)) {
         println("Какой ингредиент вы хотите добавить?")
-    } else {
-        return
-    }
-    val inputIngredient = readln()
+        val inputIngredient = readln()
 
-    listOfIngredients.add(inputIngredient)
+        listOfIngredients.add(inputIngredient)
 
-    println("Теперь в рецепте есть следующие ингредиенты: ")
-    listOfIngredients.forEach {
-        println(it)
+        println("Теперь в рецепте есть следующие ингредиенты: ")
+        listOfIngredients.forEach {
+            println(it)
+        }
     }
 }
