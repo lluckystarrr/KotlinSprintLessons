@@ -11,7 +11,7 @@ fun main() {
 
 fun createPassword(amountSymbols: Int): String {
     val number = 0..9
-    val symbols = arrayOf("!", "\"", "#", "$", "%", "&", "(", ")", "'", "*", "+", ",", "-", ".", "/", " ")
+    val symbols = ' '..'/'
     var password = ""
 
     for (i in 1..amountSymbols) {
