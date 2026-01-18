@@ -5,10 +5,10 @@ fun main() {
     var winsCounter = 0
 
     do {
-        val humanNumber = dice()
+        val humanNumber = rollDice()
         println("Бросает человек: $humanNumber")
 
-        val computerNumber = dice()
+        val computerNumber = rollDice()
         println("Бросает компьютер: $computerNumber")
 
         if (humanNumber < computerNumber) {
@@ -19,16 +19,13 @@ fun main() {
         } else {
             println("Ничья")
         }
-    } while (countRounds())
+    } while (askToContinue())
     println("Количество побед - $winsCounter")
 }
 
-fun dice(): Int {
-    val number = (1..6).random()
-    return number
-}
+fun rollDice(): Int = (1..6).random()
 
-fun countRounds(): Boolean {
+fun askToContinue(): Boolean {
     println("Хотите бросить кости еще раз? Введите Да или Нет")
     val answer = readln()
     return (answer.equals("да", ignoreCase = true))
