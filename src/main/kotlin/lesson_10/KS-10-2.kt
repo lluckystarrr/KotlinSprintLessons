@@ -3,11 +3,11 @@ package org.example.lesson_10
 fun main() {
 
     println("Придумай логин")
-    val createLogin = readln()
+    val login = readln()
     println("Придумай пароль")
-    val createPassword = readln()
+    val password = readln()
 
-    val checkResult = check(createLogin, createPassword)
+    val checkResult = validateCredentials(login, password)
 
     if (checkResult) {
         println("Добро пожаловать!")
@@ -16,7 +16,4 @@ fun main() {
     }
 }
 
-fun check(createLogin: String, createPassword: String): Boolean {
-    val result = createLogin.length >= 4 && createPassword.length >= 4
-    return result
-}
+fun validateCredentials(login: String, password: String): Boolean = login.length >= 4 && password.length >= 4
