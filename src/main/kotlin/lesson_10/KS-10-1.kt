@@ -1,11 +1,14 @@
 package org.example.lesson_10
 
 fun main() {
-    val humanNumber = dice()
-    println("Бросает человек: $humanNumber")
 
-    val computerNumber = dice()
-    println("Бросает компьютер: $computerNumber")
+    println("Ход человека. Бросайте кости")
+    val humanNumber = rollDice()
+    println("Ваше число: $humanNumber")
+
+    println("Ход компьютера. Бросайте кости")
+    val computerNumber = rollDice()
+    println("Ваше число: $computerNumber")
 
     if (humanNumber < computerNumber) {
         println("Победил компьютер")
@@ -16,7 +19,4 @@ fun main() {
     }
 }
 
-fun dice(): Int {
-    val number = (1..6).random()
-    return number
-}
+fun rollDice(): Int = (1..6).random()
