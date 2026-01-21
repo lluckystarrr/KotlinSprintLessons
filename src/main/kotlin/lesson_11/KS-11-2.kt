@@ -5,26 +5,25 @@ class Info2(
     val login: String,
     var password: String,
     val mail: String,
-)
-{
-    val bio: String
-
-    init {
-        bio = readingBio()
-    }
-
+    var bio: String? = null,
+) {
     fun outputInfo() {
-        println(id)
-        println(login)
-        println(password)
-        println(mail)
-        println(bio)
+    println(id)
+    println(login)
+    println(password)
+    println(mail)
+    println(bio)
     }
 
-    fun readingBio(): String {
-        println("Введи информацию о себе")
-        return readln()
-    }
+fun addBio(newBio: String?) {
+    bio = newBio
+}
+
+fun readBio() {
+    println("Введи информацию о себе:")
+    val inputBio = readln()
+    bio = inputBio
+}
 
     fun changePassword() {
         println("Введите текущий пароль")
@@ -50,7 +49,7 @@ fun main() {
     )
     println("Текущая информация о пользователе")
     user.outputInfo()
-
+    user.readBio()
     user.changePassword()
 
     println("Обновленная информация о пользователе")
