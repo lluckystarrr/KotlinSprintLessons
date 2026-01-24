@@ -1,8 +1,8 @@
 package org.example.lesson_11
 
 class RecipeCategory(
-    val backgroundImage: String,
-    val title: String,
+    val backgroundImageCategory: String,
+    val titleCategory: String,
     val dishImage: String,
     val dishName: String,
 )
@@ -12,8 +12,8 @@ class Recipe(
 )
 
 class Ingredients(
-    val backgroundImage1: String,
-    val title1: String,
+    val backgroundImageIng: String,
+    val titleIng: String,
     var numberOfServings: Int,
     val ingredients: List<String>,
     var inFavorite: Boolean = false,
