@@ -2,9 +2,8 @@ package org.example.lesson_11
 
 class RecipeCategory(
     val backgroundImageCategory: String,
+    val categoryId: Int,
     val titleCategory: String,
-    val dishImage: String,
-    val dishName: String,
     val recipes: List<Recipe>
 )
 
