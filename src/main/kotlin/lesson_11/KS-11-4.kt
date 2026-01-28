@@ -5,19 +5,19 @@ class RecipeCategory(
     val titleCategory: String,
     val dishImage: String,
     val dishName: String,
+    val recipes: List<Recipe>
 )
 
 class Recipe(
+    val recipeImage: String,
+    val recipeId: Int,
+    val recipeTitle: String,
+    val ingredients: List<Ingredient>,
+    var numberOfServings: Int = 1,
     val cookingMethod: String,
-)
-
-class Ingredients(
-    val backgroundImageIng: String,
-    val titleIng: String,
-    var numberOfServings: Int,
-    val ingredients: List<String>,
     var inFavorite: Boolean = false,
-) {
+)
+{
     fun addToFavorite() {
         inFavorite = true
     }
@@ -31,3 +31,9 @@ class Ingredients(
         numberOfServings = readln().toInt()
     }
 }
+
+class Ingredient(
+    val name: String,
+    val amount: Int,
+    val measure: String,
+)
