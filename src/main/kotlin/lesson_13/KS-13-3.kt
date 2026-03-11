@@ -16,7 +16,5 @@ fun main() {
         Contact("Егор", 89165491234, "null")
     )
 
-    companyContact.forEach {
-        it.showData()
-    }
+    companyContact.mapNotNull { it.company }.forEach { println(it) }
 }
