@@ -26,8 +26,8 @@ fun main() {
             inputCompany = null.toString()
         }
 
-        val contact6 = Contacts(inputName, inputNumber, inputCompany)
-        phoneBook.add(contact6)
+        val contact = Contacts(inputName, inputNumber, inputCompany)
+        phoneBook.add(contact)
 
         println("Добавить еще компанию?")
         val addContact = readln()
