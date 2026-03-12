@@ -13,7 +13,7 @@ fun main() {
         Contact("Андрей", 890835674378, "Березка"),
         Contact("Мария", 89163451234, "Сахарок"),
         Contact("Светална", 89178978932),
-        Contact("Егор", 89165491234, "null")
+        Contact("Матвей", 89165491234, "null")
     )
 
     companyContact.mapNotNull { it.company }.forEach { println(it) }
