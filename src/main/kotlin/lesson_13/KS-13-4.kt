@@ -1,6 +1,6 @@
 package org.example.lesson_13
 
-class Contacts(val name: String, val number: Long, val company: String? = null) {
+class Contact(val name: String, val number: Long, val company: String? = null) {
 
     fun showData() {
         println("Имя: $name, Номер: $number, Компания: ${company ?: "<не указано>"}")
@@ -8,32 +8,30 @@ class Contacts(val name: String, val number: Long, val company: String? = null) 
 }
 
 fun main() {
-    val phoneBook = mutableListOf<Contacts>()
+    val phoneBook = mutableListOf<Contact>()
+
     do {
         println("Введите имя")
         val inputName = readln()
 
         println("Введите номер")
         val inputNumber = readln().toLongOrNull()
+
         if (inputNumber == null) {
             println("Вы не заполнили номер")
-            return
+            println("Добавить еще контакт?")
+            continue
         }
 
         println("Введите компанию")
-        var inputCompany = readln()
-        if (inputCompany == "") {
-            inputCompany = null.toString()
-        }
+        val inputCompany = readln()
+        val company = inputCompany.ifEmpty { null }
 
-        val contact = Contacts(inputName, inputNumber, inputCompany)
+        val contact = Contact(inputName, inputNumber, company)
         phoneBook.add(contact)
 
-        println("Добавить еще компанию?")
-        val addContact = readln()
-    } while (
-        addContact.equals("да", ignoreCase = true)
-    )
+        println("Добавить еще контакт?")
+    } while (readln().equals("да", ignoreCase = true))
 
     phoneBook.forEach { it.showData() }
 }
