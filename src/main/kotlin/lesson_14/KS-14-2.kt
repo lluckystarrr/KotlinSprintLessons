@@ -1,17 +1,5 @@
 package org.example.lesson_14
 
-//Скопируй классы из предыдущей задачи и измени их названия для избегания конфликтов.
-//
-//Каждый тип корабля обладает уникальным способом погрузки:
-//
-//- лайнер выдвигает горизонтальный трап со шкафута;
-//- грузовой корабль активирует погрузочный кран;
-//- ледокол открывает ворота со стороны кормы.
-//
-//Реализуй методы погрузки, специфичные для каждого вида корабля.
-//
-//Добавь метод вывода информации о свойствах корабля и выведи информацию в консоль.
-
 open class Ship2(
     val speed: Int = 10,
     val carryingCapacity: Int = 10,
@@ -58,18 +46,18 @@ class Icebreaker2(
 
 fun main() {
 
-    val liner1 = Liner2(10, 10, 10)
+    val liner2 = Liner2(10, 10, 10)
     println("Лайнер:")
-    liner1.printInfo()
-    liner1.extentHorizontalLadder()
+    liner2.printInfo()
+    liner2.extentHorizontalLadder()
 
-    val cargo1 = Cargo2(5, 15, 5)
+    val cargo2 = Cargo2(5, 15, 5)
     println("\nГрузовой корабль:")
-    cargo1.printInfo()
-    cargo1.activateLoadingCrane()
+    cargo2.printInfo()
+    cargo2.activateLoadingCrane()
 
-    val iceBreaker1 = Icebreaker2(6, 8, 5)
+    val iceBreaker2 = Icebreaker2(6, 8, 5)
     println("\nЛедокол:")
-    iceBreaker1.printInfo()
-    iceBreaker1.openGate()
+    iceBreaker2.printInfo()
+    iceBreaker2.openGate()
 }
