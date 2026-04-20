@@ -2,10 +2,9 @@ package org.example.lesson_15
 
 class WeatherServer {
     fun sendInfo(data: WeatherStationStats) {
-        if (data is Temperature) {
-            println("Температура ${data.value} градусов")
-        } else {
-            println("Осадки ${data.value} мм")
+        when (data) {
+            is Temperature -> println("Температура ${data.value} градусов")
+            is PrecipitationAmount -> println("Осадки ${data.value} мм")
         }
     }
 }
