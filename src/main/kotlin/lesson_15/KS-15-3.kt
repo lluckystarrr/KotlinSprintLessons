@@ -1,42 +1,43 @@
 package org.example.lesson_15
 
-interface ReadForum {
-    fun readForum() = println("Читать форум")
-}
+abstract class User(val name: String) {
 
-interface WriteMessage {
-    fun writeMessage() = println("Писать сообщения")
-}
+    fun readForum() {
+        println("Читать форум")
+    }
 
-interface DeleteMessage {
-    fun deleteMessage() = println("Удалять сообщения")
-}
+    fun writeMessage() {
+        println("Писать сообщения")
+    }
 
-interface DeleteUsers {
-    fun deleteUsers() = println("Удалять пользователей")
-}
-
-abstract class User(val userType: String, val name: String) {
     fun showInfo() {
-        println("Пользователь: $name, тип: $userType")
+        println("Пользователь: $name")
     }
 }
 
-class RegularUser(name: String) : User("обычный", name), ReadForum, WriteMessage
+class RegularUser(name: String) : User(name)
 
-class Admin(name: String) : User("админ", name), ReadForum, WriteMessage, DeleteMessage, DeleteUsers
+class Admin(name: String) : User(name) {
+
+    fun deleteMessage() {
+        println("Удалять сообщения")
+    }
+
+    fun deleteUser() {
+        println("Удалять пользователей")
+    }
+}
 
 fun main() {
-    val user1 = RegularUser(name = "Цветочек")
+    val user1 = RegularUser("Цветочек")
     user1.showInfo()
-    user1.writeMessage()
     user1.readForum()
-
+    user1.writeMessage()
 
     val admin1 = Admin("Одмин")
     admin1.showInfo()
     admin1.readForum()
     admin1.writeMessage()
-    admin1.deleteUsers()
     admin1.deleteMessage()
+    admin1.deleteUser()
 }
