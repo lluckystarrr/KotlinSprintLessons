@@ -1,6 +1,11 @@
 package org.example.lesson_16
 
-class Order(val orderNumber: Int, private var orderStatus: String) {
+class Order(private val orderNumber: Int, private var orderStatus: String) {
+
+    fun getOrderNumber(): Int {
+        return orderNumber
+    }
+
     fun getStatus(): String {
         return orderStatus
     }
@@ -16,14 +21,10 @@ class Order(val orderNumber: Int, private var orderStatus: String) {
     }
 }
 
-fun changeApplication(order: Order, newStatus: String) {
-    order.changeRequest(newStatus)
-}
-
 fun main() {
     val firstOrder = Order(1, "В процессе")
-    println("Номер заказа: ${firstOrder.orderNumber}")
+    println("Номер заказа: ${firstOrder.getOrderNumber()}")
     println("Статус заказа: ${firstOrder.getStatus()}")
 
-    changeApplication(firstOrder, "Готов к выдаче")
+    firstOrder.changeRequest("Готов к выдаче")
 }
