@@ -3,21 +3,21 @@ import kotlin.math.pow
 
 private const val PI = 3.14
 
-class Circle12(private val radius: Int) {
+class Circle12(private val radius: Double) {
 
-    fun countCircumference(): Double {
+    fun getCountCircumference(): Double {
         return 2 * PI * radius
     }
 
-    fun countCircleArea(): Double {
-        return PI * radius.toDouble().pow(2)
+    fun getCountCircleArea(): Double {
+        return PI * radius.pow(2)
     }
 }
 
 fun main() {
-    val circle1 = Circle12(radius = 12)
-    val circumference = circle1.countCircumference()
-    val circleArea = circle1.countCircleArea()
+    val circle1 = Circle12(radius = 12.0)
+    val circumference = circle1.getCountCircumference()
+    val circleArea = circle1.getCountCircleArea()
     println(circumference)
     println(circleArea)
 }
