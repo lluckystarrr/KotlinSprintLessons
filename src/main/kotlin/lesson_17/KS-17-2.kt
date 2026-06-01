@@ -3,9 +3,7 @@ package org.example.lesson_17
 class Spaceship(name: String, speed: Int, port: String) {
     var name = name
         set(value) {
-            if (value != field) {
-                println("невозможно изменить имя!")
-            }
+            println("невозможно изменить имя!")
         }
 }
 
