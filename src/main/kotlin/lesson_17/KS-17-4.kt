@@ -2,7 +2,7 @@ package org.example.lesson_17
 
 class Package(
     val trackingNumber: String,
-    startLocation: String
+    startLocation: String,
 ) {
     var movementCount = 0
         private set
