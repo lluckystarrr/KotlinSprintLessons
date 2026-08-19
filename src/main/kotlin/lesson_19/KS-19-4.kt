@@ -3,7 +3,7 @@ package org.example.lesson_19
 enum class Ammo(val damage: Int) {
     BLUE(5),
     GREEN(10),
-    RED(20)
+    RED(20),
 }
 
 class Tank {
@@ -15,8 +15,10 @@ class Tank {
     }
 
     fun fire() {
-        if (currentAmmo != null) {
-            println("Нанесен урон: ${currentAmmo!!.damage} единиц")
+        val ammo = currentAmmo
+
+        if (ammo != null) {
+            println("Нанесен урон: ${ammo.damage} единиц")
         } else {
             println("Танк не заряжен")
         }
