@@ -9,7 +9,7 @@ val clickActions: List<() -> Unit> = elements.map { element ->
 
 fun main() {
     for (it in elements.indices) {
-        if (it % 2 == 0) {
+        if ((it + 1) % 2 == 0) {
             clickActions[it]()
         }
     }
