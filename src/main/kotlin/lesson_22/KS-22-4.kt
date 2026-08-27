@@ -1,19 +1,19 @@
 package org.example.lesson_22
 
-data class MainScreenState(
-    val data: String = "",
-    val isLoading: Boolean = false
-)
-
 class MainScreenViewModel {
-    var state = MainScreenState()
+    data class MainScreenState(
+        val data: String = "",
+        val isLoading: Boolean = false
+    )
+
+    var mainScreenState = MainScreenState()
         private set
 
     fun loadData() {
-        state = state.copy(isLoading = true)
-        println("Состояние: ${state.data}, Загрузка: ${state.isLoading}")
+        mainScreenState = mainScreenState.copy(isLoading = true)
+        println("Состояние: ${mainScreenState.data}, Загрузка: ${mainScreenState.isLoading}")
 
-        state = state.copy(
+        mainScreenState = mainScreenState.copy(
             data = "Загруженные данные с сервера",
             isLoading = false
         )
@@ -24,13 +24,13 @@ fun main() {
     val viewModel = MainScreenViewModel()
 
     println("Начальное состояние")
-    println("Состояние: ${viewModel.state.data}, Загрузка: ${viewModel.state.isLoading}")
+    println("Состояние: ${viewModel.mainScreenState.data}, Загрузка: ${viewModel.mainScreenState.isLoading}")
     println()
 
-    println("Звгрузка")
+    println("Загрузка")
     viewModel.loadData()
 
     println()
     println("Итоговое состояние")
-    println("Состояние: ${viewModel.state.data}, Загрузка: ${viewModel.state.isLoading}")
+    println("Состояние: ${viewModel.mainScreenState.data}, Загрузка: ${viewModel.mainScreenState.isLoading}")
 }
