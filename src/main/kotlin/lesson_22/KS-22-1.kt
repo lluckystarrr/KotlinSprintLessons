@@ -1,7 +1,7 @@
 package org.example.lesson_22
 
-class RegularBook(val title: String, val author: String)
-data class DataBook(val title: String, val author: String)
+class RegularBook(val title: String, val author: String,)
+data class DataBook(val title: String, val author: String,)
 
 fun main() {
     val regular1 = RegularBook("Пес и кошка", "Ринатова")
